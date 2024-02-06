@@ -11,8 +11,10 @@ public class Desafio3 {
 
         for (int moneda : monedas) {
             if (moneda <= resultado) {
+                //actualiza el resultado sumándole el valor de la moneda
                 resultado += moneda;
             } else {
+                //revisa si el resultamo es mayot a la moneda
                 break;
             }
         }
@@ -29,6 +31,9 @@ public class Desafio3 {
 
         int[] monedas3 = {1, 5, 1, 1, 1, 10, 15, 20, 100};
         System.out.println(cantidadMinimaCambio(monedas3));
+
+        int[] monedas4 = {1, 2, 2, 2, 2, 2};
+        System.out.println(cantidadMinimaCambio(monedas4));
     }
 }
 

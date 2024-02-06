@@ -10,16 +10,19 @@ public class Desafio1 {
 
         for (int numero : numeros) {
             String numeroStr = String.valueOf(numero);
-            StringBuilder nuevoNumeroStr = new StringBuilder();
 
+                //construye el metodo modificado
+            StringBuilder nuevoNumeroStr = new StringBuilder();
+                //itera caracteres
             for (char digito : numeroStr.toCharArray()) {
+                //convuerte a entero el caracter
                 int digitoInt = Character.getNumericValue(digito);
 
                 if (digitoInt < s) {
                     nuevoNumeroStr.insert(0, digitoInt);
                 }
             }
-
+                //revisa el numero modificado tenga menos digitos
             if (nuevoNumeroStr.length() > 0) {
                 resultado.add(Integer.parseInt(nuevoNumeroStr.reverse().toString()));
             }
@@ -51,5 +54,7 @@ public class Desafio1 {
 
         List<Integer> lista7 = List.of(60, 6, 5, 4, 3, 2, 7, 7, 29, 1);
         System.out.println(cambiarPosiciones(lista7, s));
+
+
     }
 }
